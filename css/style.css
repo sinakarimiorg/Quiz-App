@@ -7,44 +7,89 @@ html,
 body {
     position: relative;
 }
- /* ////////////////////////////////////quiz page styles */
-.quiz-page {
-    /* display: none; */
-    height: 100%;
-    width: 100%;
-}
 
-.quiz-page header {
-    display: flex;
-    flex-direction: column;
-    justify-content: start;
-    align-items: start;
-    color: #fff;
-    padding: 3rem 0 3rem 2rem;
-}
-
-.back-btn {
+.btn-icon{
     background-color: unset;
     border: none;
 }
 
-.back-btn i {
+.btn-icon i {
     font-size: xx-large;
     color: #fff;
 }
 
-.quiz-page-title {
+.quiz-app-title {
     color: #fff;
-    margin-left: 33%;
-    margin-top: 10%;
+    margin-bottom: 10%;
     font-size: 1.6rem;
     font-weight: 600;
 }
 
+/* ////////////////////////////////////home page styles */
+.home-page {
+    display: flex;
+    /* display: none; */
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+}
+
+.home-page header{
+    width: 100%;
+    height: 2rem;
+    padding: 3.5rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.home-img{
+    width: 80%;
+    height: 55%;
+}
+
+.play-btn{
+    background-color: #F9A826;
+    width: 80%;
+    padding: 10px 0;
+    border: none;
+    border-radius: 8px;
+    font-size: large;
+    font-weight: bold;
+    letter-spacing: .1rem;
+    margin-top: 10%;
+}
+
+
+
+
+
+
+
+
+
+/* ////////////////////////////////////quiz page styles */
+.quiz-page {
+    /* display: flex; */
+    display: none;
+    height: 100%;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+.quiz-page header {
+    color: #fff;
+    padding: 3rem 0 0 2rem;
+    width: 100%;
+}
+
+
 .timer {
     width: 70%;
     height: 3vh;
-    margin-left: 15%;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -115,7 +160,7 @@ swiper-slide {
     justify-content: space-evenly;
 }
 
-.awnser-btn{
+.awnser-btn {
     background-color: #000000;
     color: #fff;
     padding: 5px 0;
@@ -123,7 +168,7 @@ swiper-slide {
     border-radius: 8px;
 }
 
-.finish-btn{
+.finish-btn {
     width: 70%;
     background-color: #FD6F01;
     color: #000000;
