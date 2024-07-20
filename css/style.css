@@ -37,11 +37,44 @@ body {
 
 .home-page header{
     width: 100%;
-    height: 2rem;
-    padding: 3.5rem 2rem;
+    padding: 1rem 2rem;
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: start;
+}
+
+.toggle-section{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+}
+
+.menu-icon{
+    padding-left: 5rem;
+}
+
+.item-list{
+    display: none;
+    margin-top: 1rem;
+    list-style: none;
+    color: white;
+    background-color: #9b382262;
+    border: none;
+    border-radius: 10px;
+}
+
+.item-list li{
+    padding-top: 1rem;
+    width: 100%;
+    padding: .5rem 2rem;
+}
+
+.orange-border{
+    display: block;
+    background-color: #F2613F;
+    width: 100%;
+    height: 1px;
 }
 
 .home-img{
