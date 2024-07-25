@@ -17,7 +17,7 @@
 
 <body style="background-image: url('images/background-svg.svg');">
     <div class="loader">
-      </div>
+    </div>
     <section class="home-page">
         <header>
             <div class="toggle-section">
@@ -70,7 +70,7 @@
                         <button class="awnser-btn" value="false">Coffee</button>
                         <button class="awnser-btn" value="true">Cocoa</button>
                         <button class="awnser-btn" value="false">milk</button>
-                        <button class="awnser-btn" value="false">Mississippi river</button>
+                        <button class="awnser-btn" value="false">sugar</button>
                     </div>
                 </swiper-slide>
                 <swiper-slide> <span class="question-box-title">question 2/10</span>
@@ -79,7 +79,7 @@
                         <button class="awnser-btn" value="false">Amazon river</button>
                         <button class="awnser-btn" value="false">Niger river</button>
                         <button class="awnser-btn" value="true">Nile river</button>
-                        <button class="awnser-btn" value="false">sugar</button>
+                        <button class="awnser-btn" value="false">Mississippi river</button>
                     </div>
                 </swiper-slide>
                 <swiper-slide> <span class="question-box-title">question 3/10</span>
@@ -159,6 +159,19 @@
             <button class="finish-btn main-btn">Finish Quiz</button>
         </div>
     </section>
+     <!-- The Modal -->
+     <div id="result-modal">
+        <div class="result-content">
+            <i class="fa-solid fa-xmark close-btn"></i>
+            <div class="score-container">
+                <p>Your score is:</p>
+               <p>
+                   <span id="final-score">5</span> From 10
+               </p>
+               <button class="try-again-btn main-btn">Try again</button>
+            </div>
+        </div>
+    </div>
 
     <script type="module" src="/script.js"></script>
     <!-- swiper cdn -->

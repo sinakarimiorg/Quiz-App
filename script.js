@@ -12,22 +12,13 @@ let quizPage = $.querySelector('.quiz-page')
 let backBtn = $.querySelector('.back-btn')
 let timerBar = $.querySelector('#timer-bar')
 let questionsContainer = $.querySelector('.questions-container')
-let awnserBtn = $.querySelector('.awnser-btn')
+let awnserBtns = Array.from($.getElementsByClassName('awnser-btn'))
 let finishBtn = $.querySelector('.finish-btn')
 
 let remainingTime = 60; //seconds
 const totalTime = remainingTime
-////////////////////////
 
-function showHomePage() {
-    homePage.classList.remove("unvisible-page")
-}
-function hideHomePage() {
-    homePage.classList.add("unvisible-page")
-}
-
-
-function aligudarz() {
+function countDown() {
     function timerProgress() {
         if (remainingTime > 0) {
             const progress = ((totalTime - remainingTime) / totalTime) * 100;
@@ -49,23 +40,32 @@ function aligudarz() {
         }
     }
 }
+let timer = countDown()
 
-let game = aligudarz()
+
+function showHomePage() {
+    homePage.classList.remove("unvisible-page")
+}
+function hideHomePage() {
+    homePage.classList.add("unvisible-page")
+}
+
 
 function showQuizPage() {
     quizPage.classList.remove("unvisible-page")
     loaderFun()
-    game.start()
+    timer.start()
 }
 function hideQuizPage() {
     quizPage.classList.add("unvisible-page")
 }
 
+
 function loaderFun() {
     Loader.classList.add("hidden");
 }
-
 window.onload = loaderFun()
+
 
 settingBtn.addEventListener('click', function () {
     settingBox.classList.toggle("visible")
@@ -76,29 +76,30 @@ menuBtn.addEventListener('click', function () {
 })
 
 
-
-// function startTimerFun() {
-//     if (remainingTime > 0) {
-//         const progress = ((totalTime - remainingTime) / totalTime) * 100;
-//         timerBar.style.width = `${progress}%`;
-
-//         remainingTime--;
-//         setTimeout(startTimerFun, 1000);
-//     } else {
-//         timerBar.style.width = "100%";
-//     }
-// }
-
-
 playBtn.addEventListener('click', function () {
     hideHomePage()
     Loader.classList.remove("hidden");
     setTimeout(showQuizPage, 1000)
 })
-////////////////////////////////////////////quiz page section
 
 backBtn.addEventListener('click', function () {
     hideQuizPage()
     showHomePage()
-    game.stop()
+    timer.stop()
 })
+
+let score = 0
+awnserBtns.forEach(function (btn) {
+    btn.addEventListener('click', function () {
+        let otherButtons = btn.parentElement.children
+        for (let i = 0; i < otherButtons.length; i++) {
+            otherButtons[i].disabled = true
+        }
+
+        if (btn.value === "true") {
+            btn.classList.add('right')
+            score++
+        } else { btn.classList.add('wrong') }
+    })
+})
+
