@@ -12,6 +12,10 @@ body {
     position: relative;
 }
 
+.show{
+    display: block !important;
+}
+
 .btn-icon {
     background-color: unset;
     border: none;
@@ -297,7 +301,7 @@ swiper-slide {
 /* The Modal  */
 
 #result-modal {
-    /* display: none; */
+    display: none;
     position: fixed;
     z-index: 9999;
     left: 0;

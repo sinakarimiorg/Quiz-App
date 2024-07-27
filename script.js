@@ -14,6 +14,11 @@ let timerBar = $.querySelector('#timer-bar')
 let questionsContainer = $.querySelector('.questions-container')
 let awnserBtns = Array.from($.getElementsByClassName('awnser-btn'))
 let finishBtn = $.querySelector('.finish-btn')
+let scoreModal = $.querySelector('#result-modal')
+let scoreNumber = $.querySelector('#final-score')
+let scoreCloseBtn = $.querySelector('.close-btn')
+let tryAgainBtn = $.querySelector('.try-again-btn')
+
 
 let remainingTime = 60; //seconds
 const totalTime = remainingTime
@@ -28,6 +33,7 @@ function countDown() {
         } else {
             timerBar.style.width = "100%";
             clearInterval(countDown)
+            scoreModal.className = 'show'
         }
     }
     let countDown;
@@ -88,6 +94,10 @@ backBtn.addEventListener('click', function () {
     timer.stop()
 })
 
+finishBtn.addEventListener('click', function () {
+    scoreModal.className = 'show'
+})
+
 let score = 0
 awnserBtns.forEach(function (btn) {
     btn.addEventListener('click', function () {
@@ -100,6 +110,14 @@ awnserBtns.forEach(function (btn) {
             btn.classList.add('right')
             score++
         } else { btn.classList.add('wrong') }
+        scoreNumber.innerHTML = score
+        console.log(score, scoreNumber);
     })
 })
 
+scoreCloseBtn.addEventListener('click', function () {
+    location.reload()
+})
+tryAgainBtn.addEventListener('click', function () {
+    location.reload()
+})
