@@ -24,7 +24,7 @@
 
 ## Installation
 Let's make it easy! Just download this template, use it on your project. <br>
-Notice: be sure that your sistem has Node js you can donload it from [here](https://nodejs.org/en/download/prebuilt-installer)
+Notice: be sure that your sistem has Node js you can download it from [here](https://nodejs.org/en/download/prebuilt-installer)
 
 <h4>Open in browser</h4>
 Simply get the latest master and open the index.html file.
@@ -32,7 +32,7 @@ Simply get the latest master and open the index.html file.
 ## Demo
 To see Live preview home page of app click on button
 [Live preview](https://sinakarimiorg.github.io/Quiz-App/)
-but I suggest to clone programm to access all features.
+but I sugess to clone program to access all features.
 
 ## Author
 [Sina Karimi](https://github.com/sinakarimiorg)🫰
