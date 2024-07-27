@@ -12,6 +12,7 @@ let quizPage = $.querySelector('.quiz-page')
 let backBtn = $.querySelector('.back-btn')
 let timerBar = $.querySelector('#timer-bar')
 let questionsContainer = $.querySelector('.questions-container')
+let swiper = $.querySelector('.mySwiper')
 let awnserBtns = Array.from($.getElementsByClassName('awnser-btn'))
 let finishBtn = $.querySelector('.finish-btn')
 let scoreModal = $.querySelector('#result-modal')
@@ -121,3 +122,8 @@ scoreCloseBtn.addEventListener('click', function () {
 tryAgainBtn.addEventListener('click', function () {
     location.reload()
 })
+
+
+if (window.matchMedia("(min-width: 1800px)").matches) {
+    swiper.setAttribute("space-between", "300")
+}

@@ -147,7 +147,7 @@ body {
 }
 
 /* ////////////////////////Loader */
-/* HTML: <div class="loader"></div> */
+
 .loader {
     position: fixed;
     z-index: 99;

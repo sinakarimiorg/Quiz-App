@@ -63,7 +63,7 @@
         <div class="questions-container">
             <swiper-container class="mySwiper" pagination="true" pagination-clickable="true" slides-per-view="auto"
                 centered-slides="true" space-between="30">
-                <swiper-slide>
+                <swiper-slide id="first-slide">
                     <span class="question-box-title">question 1/10</span>
                     <p class="question-text">What is the primary ingredient in chocolate?</p>
                     <div class="Answer-options">
@@ -145,7 +145,7 @@
                         <button class="awnser-btn" value="false">five</button>
                     </div>
                 </swiper-slide>
-                <swiper-slide> <span class="question-box-title">question 10/10</span>
+                <swiper-slide id="last-slide"> <span class="question-box-title">question 10/10</span>
                     <p class="question-text"> What is the capital of Japan?</p>
                     <div class="Answer-options">
                         <button class="awnser-btn" value="false">Berlin</button>
@@ -159,16 +159,16 @@
             <button class="finish-btn main-btn">Finish Quiz</button>
         </div>
     </section>
-     <!-- The Modal -->
-     <div id="result-modal">
+    <!-- The Modal -->
+    <div id="result-modal">
         <div class="result-content">
             <i class="fa-solid fa-xmark close-btn"></i>
             <div class="score-container">
                 <p>Your score is:</p>
-               <p>
-                   <span id="final-score">0</span> From 10
-               </p>
-               <button class="try-again-btn main-btn">Try again</button>
+                <p>
+                    <span id="final-score">0</span> From 10
+                </p>
+                <button class="try-again-btn main-btn">Try again</button>
             </div>
         </div>
     </div>
