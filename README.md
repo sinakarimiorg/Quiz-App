@@ -1,4 +1,4 @@
-## an interesting Quiz app with pure JavaScript
+## An interesting Quiz app with pure JavaScript
 ![Author](https://img.shields.io/badge/author-%40sinakarimiorg-blue.svg)
 [![Twitter](https://img.shields.io/twitter/url/https/github.com/sinakarimiorg/my-login/.svg?style=social)](https://x.com/itsSinakarimi)
 ![Screenshot 2024-07-28 030730](https://github.com/user-attachments/assets/72d7b99a-b16d-4aab-8674-a6236d46e4e6)
