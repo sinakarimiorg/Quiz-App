@@ -11,8 +11,9 @@ let playBtn = $.querySelector('.play-btn')
 let quizPage = $.querySelector('.quiz-page')
 let backBtn = $.querySelector('.back-btn')
 let timerBar = $.querySelector('#timer-bar')
+let questionTimerBar = $.querySelectorAll('.question-timer-bar')
 let questionsContainer = $.querySelector('.questions-container')
-let swiper = $.querySelector('.mySwiper')
+let swiperElem = $.querySelector('.mySwiper')
 let awnserBtns = Array.from($.getElementsByClassName('awnser-btn'))
 let finishBtn = $.querySelector('.finish-btn')
 let scoreModal = $.querySelector('#result-modal')
@@ -20,8 +21,8 @@ let scoreNumber = $.querySelector('#final-score')
 let scoreCloseBtn = $.querySelector('.close-btn')
 let tryAgainBtn = $.querySelector('.try-again-btn')
 
-
-let remainingTime = 60; //seconds
+//////////////////////////////////////////////////////// Timer For Exam 
+let remainingTime = 65; //seconds
 const totalTime = remainingTime
 
 function countDown() {
@@ -49,6 +50,16 @@ function countDown() {
 }
 let timer = countDown()
 
+//////////////////////////////////////////////////// Timer For Questions 
+
+swiperElem.addEventListener('swiperslidechange', () => {
+    const timerBars = document.querySelectorAll('.qusetion-timer-bar');
+    timerBars.forEach(bar => {
+        bar.style.animation = 'none';  // Reset the animation
+        bar.offsetHeight;  // Trigger reflow
+        bar.style.animation = 'timer-bar-question 6s linear';
+    });
+});
 
 function showHomePage() {
     homePage.classList.remove("unvisible-page")
@@ -86,7 +97,8 @@ menuBtn.addEventListener('click', function () {
 playBtn.addEventListener('click', function () {
     hideHomePage()
     Loader.classList.remove("hidden");
-    setTimeout(showQuizPage, 1000)
+    // setTimeout(showQuizPage, 1000)
+    showQuizPage()
 })
 
 backBtn.addEventListener('click', function () {
@@ -123,7 +135,7 @@ tryAgainBtn.addEventListener('click', function () {
     location.reload()
 })
 
-
 if (window.matchMedia("(min-width: 1800px)").matches) {
-    swiper.setAttribute("space-between", "300")
+    swiperElem.setAttribute("space-between", "300")
 }
+

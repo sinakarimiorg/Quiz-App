@@ -199,7 +199,6 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-
 }
 
 .quiz-page header {
@@ -210,7 +209,7 @@ body {
 
 
 .timer {
-    width: 70%;
+    width: 98%;
     height: 3vh;
     display: flex;
     justify-content: space-between;
@@ -228,10 +227,54 @@ body {
 
 .timer-icon {
     color: white;
-    font-size: 1.2rem;
+    font-size: 1.5rem;
     position: absolute;
-    left: 79.5%;
+    left: 91.2%;
 }
+/* //////////////////////////// questions timer */
+
+.question-timer{
+    position: relative;
+    overflow: hidden;
+    margin-top: 1rem;
+    width: 98%;
+    height: 2.5vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid white;
+    border-radius: 50px;
+}
+
+.qusetion-timer-bar{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 98%;
+    background-color: white;
+    width: 0%;
+    height: 2.5vh;
+    border-radius: 50px;
+    animation: timer-bar-question 6s linear;
+}
+  
+  @keyframes timer-bar-question {
+    from {
+      width: 0%;
+    }
+    to {
+      width: 100%;
+    }
+  }
+
+.question-timer-icon {
+    position: absolute;
+    color: white;
+    font-size: 1.3rem;
+    left: 97.6%;
+}
+
+/* /////////////////////////// */
 
 .questions-container {
     width: 100%;
@@ -288,6 +331,7 @@ swiper-slide {
     padding: 5px 0;
     border: none;
     border-radius: 8px;
+    font-size: small;
 }
 
 .right {

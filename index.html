@@ -10,7 +10,7 @@
     <!-- Bootstrap cdn -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-
+    <!-- Swiper CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <title>Qoo-Quiz</title>
 </head>
@@ -61,9 +61,14 @@
         </div>
 
         <div class="questions-container">
-            <swiper-container class="mySwiper" pagination="true" pagination-clickable="true" slides-per-view="auto"
-                centered-slides="true" space-between="30">
+            <swiper-container class="mySwiper" pagination="true" slides-per-view="auto" allow-touch-move="false"
+                autoplay="true" autoplay-delay="6000" loop="false" centered-slides="true" space-between="30">
                 <swiper-slide id="first-slide">
+                    <div class="overlay"></div> <!-- Overlay inside the slide -->
+                    <div class="question-timer">
+                        <div class="qusetion-timer-bar"></div>
+                        <i class="question-timer-icon fa-regular fa-clock"></i>
+                    </div>
                     <span class="question-box-title">question 1/10</span>
                     <p class="question-text">What is the primary ingredient in chocolate?</p>
                     <div class="Answer-options">
@@ -73,7 +78,14 @@
                         <button class="awnser-btn" value="false">sugar</button>
                     </div>
                 </swiper-slide>
-                <swiper-slide> <span class="question-box-title">question 2/10</span>
+
+                <swiper-slide>
+                    <div class="overlay"></div> <!-- Overlay inside the slide -->
+                    <div class="question-timer">
+                        <div class="qusetion-timer-bar"></div>
+                        <i class="question-timer-icon fa-regular fa-clock"></i>
+                    </div>
+                    <span class="question-box-title">question 2/10</span>
                     <p class="question-text">Which is the longest river in the world?</p>
                     <div class="Answer-options">
                         <button class="awnser-btn" value="false">Amazon river</button>
@@ -82,7 +94,14 @@
                         <button class="awnser-btn" value="false">Mississippi river</button>
                     </div>
                 </swiper-slide>
-                <swiper-slide> <span class="question-box-title">question 3/10</span>
+
+                <swiper-slide>
+                    <div class="overlay"></div> <!-- Overlay inside the slide -->
+                    <div class="question-timer">
+                        <div class="qusetion-timer-bar"></div>
+                        <i class="question-timer-icon fa-regular fa-clock"></i>
+                    </div>
+                    <span class="question-box-title">question 3/10</span>
                     <p class="question-text">What color are bananas?</p>
                     <div class="Answer-options">
                         <button class="awnser-btn" value="true">Yellow</button>
@@ -91,7 +110,14 @@
                         <button class="awnser-btn" value="false">black</button>
                     </div>
                 </swiper-slide>
-                <swiper-slide> <span class="question-box-title">question 4/10</span>
+
+                <swiper-slide>
+                    <div class="overlay"></div> <!-- Overlay inside the slide -->
+                    <div class="question-timer">
+                        <div class="qusetion-timer-bar"></div>
+                        <i class="question-timer-icon fa-regular fa-clock"></i>
+                    </div>
+                    <span class="question-box-title">question 4/10</span>
                     <p class="question-text">How many days are there in a week?</p>
                     <div class="Answer-options">
                         <button class="awnser-btn" value="false">31</button>
@@ -100,7 +126,14 @@
                         <button class="awnser-btn" value="true">7</button>
                     </div>
                 </swiper-slide>
-                <swiper-slide> <span class="question-box-title">question 5/10</span>
+
+                <swiper-slide>
+                    <div class="overlay"></div> <!-- Overlay inside the slide -->
+                    <div class="question-timer">
+                        <div class="qusetion-timer-bar"></div>
+                        <i class="question-timer-icon fa-regular fa-clock"></i>
+                    </div>
+                    <span class="question-box-title">question 5/10</span>
                     <p class="question-text">How many legs does a spider have?</p>
                     <div class="Answer-options">
                         <button class="awnser-btn" value="false">2</button>
@@ -109,7 +142,14 @@
                         <button class="awnser-btn" value="true">8</button>
                     </div>
                 </swiper-slide>
-                <swiper-slide> <span class="question-box-title">question 6/10</span>
+
+                <swiper-slide>
+                    <div class="overlay"></div> <!-- Overlay inside the slide -->
+                    <div class="question-timer">
+                        <div class="qusetion-timer-bar"></div>
+                        <i class="question-timer-icon fa-regular fa-clock"></i>
+                    </div>
+                    <span class="question-box-title">question 6/10</span>
                     <p class="question-text"> Which planet is known as the Red Planet?</p>
                     <div class="Answer-options">
                         <button class="awnser-btn" value="false">Neptune</button>
@@ -118,7 +158,14 @@
                         <button class="awnser-btn" value="false">Earth</button>
                     </div>
                 </swiper-slide>
-                <swiper-slide> <span class="question-box-title">question 7/10</span>
+
+                <swiper-slide>
+                    <div class="overlay"></div> <!-- Overlay inside the slide -->
+                    <div class="question-timer">
+                        <div class="qusetion-timer-bar"></div>
+                        <i class="question-timer-icon fa-regular fa-clock"></i>
+                    </div>
+                    <span class="question-box-title">question 7/10</span>
                     <p class="question-text"> How many continents are there?</p>
                     <div class="Answer-options">
                         <button class="awnser-btn" value="false">one</button>
@@ -127,7 +174,14 @@
                         <button class="awnser-btn" value="false">five</button>
                     </div>
                 </swiper-slide>
-                <swiper-slide> <span class="question-box-title">question 8/10</span>
+
+                <swiper-slide>
+                    <div class="overlay"></div> <!-- Overlay inside the slide -->
+                    <div class="question-timer">
+                        <div class="qusetion-timer-bar"></div>
+                        <i class="question-timer-icon fa-regular fa-clock"></i>
+                    </div>
+                    <span class="question-box-title">question 8/10</span>
                     <p class="question-text">Which animal is known as the ‘King of the Jungle’?</p>
                     <div class="Answer-options">
                         <button class="awnser-btn" value="false">Elephant </button>
@@ -136,7 +190,14 @@
                         <button class="awnser-btn" value="false">Eagle</button>
                     </div>
                 </swiper-slide>
-                <swiper-slide> <span class="question-box-title">question 9/10</span>
+
+                <swiper-slide>
+                    <div class="overlay"></div> <!-- Overlay inside the slide -->
+                    <div class="question-timer">
+                        <div class="qusetion-timer-bar"></div>
+                        <i class="question-timer-icon fa-regular fa-clock"></i>
+                    </div>
+                    <span class="question-box-title">question 9/10</span>
                     <p class="question-text">How many zeros are in one thousand?</p>
                     <div class="Answer-options">
                         <button class="awnser-btn" value="false">two</button>
@@ -145,7 +206,14 @@
                         <button class="awnser-btn" value="false">five</button>
                     </div>
                 </swiper-slide>
-                <swiper-slide id="last-slide"> <span class="question-box-title">question 10/10</span>
+
+                <swiper-slide id="last-slide">
+                    <div class="overlay"></div> <!-- Overlay inside the slide -->
+                    <div class="question-timer">
+                        <div class="qusetion-timer-bar"></div>
+                        <i class="question-timer-icon fa-regular fa-clock"></i>
+                    </div>
+                    <span class="question-box-title">question 10/10</span>
                     <p class="question-text"> What is the capital of Japan?</p>
                     <div class="Answer-options">
                         <button class="awnser-btn" value="false">Berlin</button>
@@ -155,7 +223,6 @@
                     </div>
                 </swiper-slide>
             </swiper-container>
-
             <button class="finish-btn main-btn">Finish Quiz</button>
         </div>
     </section>
@@ -176,6 +243,8 @@
     <script type="module" src="js/script.js"></script>
     <!-- swiper cdn -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
+    <!-- Swiper JS -->
+    <!-- <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script> -->
     <!-- Bootstrap cdns -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
         integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
