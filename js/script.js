@@ -22,7 +22,7 @@ let scoreCloseBtn = $.querySelector('.close-btn')
 let tryAgainBtn = $.querySelector('.try-again-btn')
 
 //////////////////////////////////////////////////////// Timer For Exam 
-let remainingTime = 65; //seconds
+let remainingTime = 61; //seconds
 const totalTime = remainingTime
 
 function countDown() {
